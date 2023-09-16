@@ -3,7 +3,7 @@
   font-family: "Play";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2");
+  src: url("../fonts/play-v19-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-family: "Play";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/play-v19-latin-700.woff2") format("woff2");
+  src: url("../fonts/play-v19-cyrillic_latin-700.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,5 +27,179 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2");
+  src: url("../fonts/roboto-v30-cyrillic_latin-500.woff2") format("woff2");
+}
+
+:root {
+  --color-brand-light: #2b7fff;
+  --color-brand-dark: #011c44;
+  --color-promo-text: #4a4a4a;
+  --color-link-light: #fff;
+  --color-copyright: #747272;
+  --color-text: #000;
+  --font-family-primary: "Roboto";
+  --font-family-title: "Play";
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-brand-dark);
+}
+
+address {
+  font-size: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-logo {
+  color: var(--color-brand-light);
+  font-family: var(--font-family-title);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+.header-nav__link {
+  color: var(--color-brand-dark);
+}
+
+.header-nav__link:hover {
+  color: var(--color-brand-light);
+  font-weight: 700;
+}
+
+/* hero-section */
+.hero-section__title-main {
+  color: var(--color-brand-light);
+  font-family: var(--font-family-title);
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 114px; /* 81.429% */
+  text-transform: capitalize;
+}
+
+.hero-section__button {
+  border: 2px solid var(--color-brand-light);
+  border-radius: 32px;
+  background: var(--color-brand-light);
+  color: var(--color-link-light);
+  padding: 16px 32px;
+}
+
+.hero-section__button:hover {
+  color: var(--color-brand-dark);
+  background: transparent;
+}
+
+.hero-section__promo {
+  color: var(--color-promo-text);
+  /* text-align: center; */
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* advertisement-section */
+
+.advertisement-section__title {
+  font-family: var(--font-family-title);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.advertisement-section__title span {
+  color: var(--color-brand-light);
+  text-transform: capitalize;
+}
+
+.advertisement-section__text {
+  font-family: var(--font-family-title);
+  font-size: 22px;
+  line-height: 38px;
+}
+
+.advertisement-section__text span {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* advantages section */
+.advantages-section__title {
+  /* text-align: center; */
+  font-family: var(--font-family-title);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.advantages-section__title span {
+  color: var(--color-brand-light);
+}
+
+.advantages-section__description {
+  color: var(--color-text);
+  /* text-align: center; */
+  line-height: 24px;
+}
+
+/* services-section */
+.services-section__title {
+  /* text-align: center; */
+  font-family: var(--font-family-title);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.services-section__title span {
+  color: var(--color-brand-light);
+}
+
+/* address-section  */
+
+.address-section__title {
+  /* text-align: center; */
+  font-family: var(--font-family-title);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.address-section__title span {
+  color: var(--color-brand-light);
+}
+
+/* footer */
+
+.footer {
+  background: var(--color-brand-dark);
+}
+
+.footer-nav__logo {
+  color: var(--color-brand-light);
+  font-family: var(--font-family-title);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+.footer-nav__item__link,
+.footer-address__list__item__link,
+.footer-privacy__link {
+  color: var(--color-link-light);
+  font-size: 16px;
+}
+
+.footer-copyright {
+  color: var(--color-copyright);
+  font-size: 13px;
 }
