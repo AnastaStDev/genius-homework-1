@@ -80,6 +80,10 @@ a {
   font-weight: 700;
 }
 
+.header-contact__link:hover svg path {
+  fill: var(--color-brand-light);
+}
+
 /* hero-section */
 .hero-section__title-main {
   color: var(--color-brand-light);
@@ -197,6 +201,17 @@ a {
 .footer-privacy__link {
   color: var(--color-link-light);
   font-size: 16px;
+}
+
+.footer-nav__item__link:hover,
+.footer-address__list__item__link:hover,
+.footer-privacy__link:hover {
+  color: var(--color-brand-light);
+  font-weight: 700;
+}
+
+.footer-address__item__link:hover svg path {
+  fill: var(--color-brand-light);
 }
 
 .footer-copyright {
