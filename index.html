@@ -50,10 +50,12 @@
   </header>
 
   <main>
+
     <!--hero-section  -->
     <section class="hero section">
       <div class="container">
         <div class="hero-content">
+          <img class="hero__img" src="./assets/img/image-background.jpg" alt="Clinic img">
           <h3 class="hero__title">Косметологічна клініка</h3>
           <h1 class="hero__title-main" lang="en">beauty zone</h1>
           <div class="hero-action-container">
@@ -66,7 +68,7 @@
 
     <!-- advertisement-section -->
     <section class="advertisement section" id="about-us">
-      <div class="container">
+      <div class="container flex-container">
         <div class="advertisment-container">
           <h2 class="advertisement__title">Перевтілюйтесь в <span lang="en">beauty zone!</span></h2>
           <p class="advertisement__text">Наша косметологічна клініка пропонує вам професійні послуги з догляду за
@@ -76,12 +78,53 @@
             процедури та
             препарати допоможуть вам підтримувати свою красу та молодість. З нами краса назавжди!</p>
         </div>
+        <div class="advertisement-content">
+          <div class="advertisement-content__before">
+            <img class="advertisement__img before" src="./assets/img/image-before.jpg" alt="before">
+            <svg class="advertisment__svg small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" fill="none"
+              style="width: 40px; height: 40px; transform: rotate(30deg); flex-shrink: 0; margin: 39px 0 0 147px;">
+              <path
+                d="M27.3205 0L23.5024 15.6641L34.641 27.3205L18.9769 23.5024L7.32051 34.641L11.1386 18.9769L0 7.32051L15.6641 11.1386L27.3205 0Z"
+                fill="#2B7FFF" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"
+              style="width: 15px; height: 15px; transform: rotate(-22.905deg); flex-shrink: 0; margin: 264px 0 0 -43px;">
+              <path
+                d="M4.48249 0.567997L8.55906 5.56521L14.9653 4.82356L9.96813 8.90013L10.7098 15.3064L6.63321 10.3092L0.226925 11.0508L5.22413 6.97428L4.48249 0.567997Z"
+                fill="#747272" />
+            </svg>
+          </div>
+          <div class="advertisement-content__after">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 56 56" fill="none"
+              style="transform: rotate(-30deg); flex-shrink: 0; margin: 19px 0 0 0;">
+              <path
+                d="M11.7128 0L30.3631 17.8217L55.4256 11.7128L37.6039 30.3631L43.7128 55.4256L25.0625 37.6039L0 43.7128L17.8217 25.0625L11.7128 0Z"
+                fill="#011F4A" />
+            </svg>
+            <img class="advertisement__img after" src="./assets/img/image-after.jpg" alt="after">
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- advantages-section -->
     <section class="advantages section" id="advantages">
       <div class="container">
+        <div class="advantages-background">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1507" viewBox="0 0 1440 1507" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1015.22 1337.67C843.995 1420.41 681.707 1522.18 492.376 1504.43C294.908 1485.92 120.319 1385.32 -15.7281 1241.03C-170.733 1076.62 -313.597 883.153 -306.334 657.304C-298.462 412.497 -193.856 145.53 23.1542 31.9091C227.164 -74.9055 448.972 123.559 678.526 141.655C938.036 162.113 1224.83 -17.697 1429.76 142.796C1655.09 319.273 1777.41 658.366 1683.59 928.798C1594.61 1185.29 1259.68 1219.54 1015.22 1337.67Z"
+              fill="url(#paint0_linear_64_137)" fill-opacity="0.2" />
+            <defs>
+              <linearGradient id="paint0_linear_64_137" x1="851" y1="-23.0002" x2="851" y2="1197.5"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0.334676" stop-color="#2B7FFF" />
+                <stop offset="0.634564" stop-color="#2B7FFF" stop-opacity="0" />
+                <stop offset="0.894715" stop-color="#2B7FFF" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <h2 class="advantages__title">Чому люди <span>обирають нас</span></h2>
         <div class="advantages-content">
           <div class="advantages__item">
@@ -162,17 +205,17 @@
 
           <ul class="services-content__list">
             <li class="services-content__item">
-              <article class="services-card">
-                <h3 class="services-card__title">Маски для обличчя</h3>
+              <article class="services-card" style="background: url('./assets/img/mask-for-face.jpg');">
+                <h3 class=" services-card__title">Маски для обличчя</h3>
               </article>
             </li>
             <li class="services-content__item">
-              <article class="services-card">
-                <h3 class="services-card__title">Ін'єкції для обличчя</h3>
+              <article class="services-card" style="background: url('./assets/img/face-injection.jpg');">
+                <h3 class=" services-card__title">Ін'єкції для обличчя</h3>
               </article>
             </li>
             <li class="services-content__item">
-              <article class="services-card">
+              <article class="services-card" style="background: url('./assets/img/facial-cleaning.jpg');">
                 <h3 class="services-card__title">Очищення обличчя</h3>
               </article>
             </li>
@@ -187,7 +230,7 @@
         <h2 class="address__title">Як нас <span>знайти</span></h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325719461126!2d30.5181753!3d50.4423566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1694851449581!5m2!1sru!2sua"
-          height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          height="450" style="border:0; border-radius: 32px;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- form -->
       </div>
@@ -239,8 +282,10 @@
                     fill="white" />
                 </svg></a></li>
           </ul>
-          <a class="footer-privacy__link" href="#" target="_blank">Політика конфіденційності</a>
-          <p class="footer-copyright">&copy; 2022 Дані захищені</p>
+          <div class="footer-info">
+            <a class="footer-privacy__link" href="#" target="_blank">Політика конфіденційності</a>
+            <p class="footer-copyright">&copy; 2022 Дані захищені</p>
+          </div>
         </address>
       </div>
     </div>
