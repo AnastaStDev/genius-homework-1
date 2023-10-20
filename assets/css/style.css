@@ -386,6 +386,26 @@ a {
   margin-bottom: 96px;
 }
 
+.services-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.services__icon:hover {
+  --color1: var(--color-brand-light);
+  --color2: var(--color-link-light);
+}
+
+.services__icon {
+  fill: var(--color1);
+}
+
+.services__icon:first-child {
+  transform: rotate(180deg);
+}
+
 .services__title {
   text-align: center;
   font-family: var(--font-family-title);
@@ -526,6 +546,10 @@ iframe {
 
 .adress-icon {
   fill: var(--color-link-light);
+}
+
+.adress-icon:hover {
+  fill: var(--color-brand-light);
 }
 
 .footer-copyright {
