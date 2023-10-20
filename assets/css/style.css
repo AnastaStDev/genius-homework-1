@@ -38,6 +38,7 @@
   --color-copyright: #747272;
   --color-background-filter: rgba(255, 255, 255, 0.25);
   --color-text: #000;
+  --color-dark-blue-star: #011f4a;
   --font-family-primary: "Roboto";
   --font-family-title: "Play";
 }
@@ -146,7 +147,11 @@ a {
   font-weight: 700;
 }
 
-.header-contact__link:hover svg path {
+.header-icon {
+  fill: var(--color-brand-dark);
+}
+
+.header-icon:hover {
   fill: var(--color-brand-light);
 }
 
@@ -281,9 +286,29 @@ a {
   height: 328px;
 }
 
+.advertisement-icon__regular {
+  fill: var(--color-brand-light);
+  transform: rotate(-19deg);
+  margin-left: 145px;
+  margin-top: 37px;
+}
+
+.advertisement-icon__small {
+  fill: var(--color-copyright);
+  transform: rotate(5deg);
+  margin-left: -42px;
+  margin-top: 271px;
+}
+
+.advertisement-icon__after {
+  fill: var(--color-dark-blue-star);
+  margin-left: -12px;
+  margin-top: 9px;
+}
+
 .advertisement__img.after {
   margin-top: 40px;
-  margin-left: -29px;
+  margin-left: -18px;
   width: 343px;
   height: 328px;
 }
@@ -331,6 +356,10 @@ a {
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
+}
+
+.advantages__icon {
+  fill: var(--color-brand-light);
 }
 
 .advantages__title {
@@ -491,8 +520,12 @@ iframe {
   font-weight: 700;
 }
 
-.footer-address__item__link:hover svg path {
+/* .footer-address__item__link:hover svg path {
   fill: var(--color-brand-light);
+} */
+
+.adress-icon {
+  fill: var(--color-link-light);
 }
 
 .footer-copyright {
