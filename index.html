@@ -12,7 +12,7 @@
   <header class="header">
     <div class="container">
       <div class="header-container"> <!-- logo -->
-        <a class="header-logo" href="/">beauty zone</a>
+        <a class="header-logo" href="#">beauty zone</a>
         <nav class="header-nav">
           <ul class="header-nav__list">
             <li class="header-nav__item"><a class="header-nav__link" href="#about-us">Про нас</a></li>
@@ -52,13 +52,15 @@
     </div>
   </header>
 
+  <div class="backgroung-section"></div>
+
   <main>
 
     <!--hero-section  -->
     <section class="hero section">
+      <div class="section__img"></div>
       <div class="container">
         <div class="hero-content">
-          <img class="hero__img" src="./assets/img/image-background.jpg" alt="Clinic img">
           <h3 class="hero__title">Косметологічна клініка</h3>
           <h1 class="hero__title-main" lang="en">beauty zone</h1>
           <div class="hero-action-container">
@@ -74,12 +76,12 @@
       <div class="container flex-container">
         <div class="advertisment-container">
           <h2 class="advertisement__title">Перевтілюйтесь в <span lang="en">beauty zone!</span></h2>
-          <p class="advertisement__text">Наша косметологічна клініка пропонує вам професійні послуги з догляду за
+          <p class="advertisement__text">Наша косметологічна клініка пропонує вам професійні послуги<br> з догляду за
             шкірою обличчя та тіла.</p>
           <p class="advertisement__text">B <span lang="en">beauty zone</span>
-            ми гарантуємо найвищі стандарти якості та приємний сервіс. Наші косметологічні
+            ми гарантуємо найвищі стандарти якості<br> та приємний сервіс. Наші косметологічні
             процедури та
-            препарати допоможуть вам підтримувати свою красу та молодість. З нами краса назавжди!</p>
+            препарати допоможуть вам підтримувати свою красу та молодість.<br> З нами краса назавжди!</p>
         </div>
         <div class="advertisement-content">
           <div class="advertisement-content__before">
@@ -195,12 +197,33 @@
     <section class="address section" id="contacts">
       <div class="container">
         <h2 class="address__title">Як нас <span>знайти</span></h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325719461126!2d30.5181753!3d50.4423566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1694851449581!5m2!1sru!2sua"
-          height="450" style="border:0; border-radius: 32px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!-- form -->
+        <div class="form-container">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325719461126!2d30.5181753!3d50.4423566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1694851449581!5m2!1sru!2sua"
+            height="481" style="border:0; border-radius: 32px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <!-- form -->
+          <div class="form-content">
+            <p class="form-content__promo">Запишіться <span>безкоштовно</span> та отримайте подарунок</p>
+            <!-- test-form -->
+            <form class="form-action" action="#" method="get">
+              <input type="text" name="full-name" placeholder="Ваше ім'я та прізвище">
+              <input type="text" name="phone" placeholder="Ваш номер телефону">
+              <input type="text" name="email" placeholder="Ваша електронна пошта">
+              <button type="submit">Записатись безкоштовно</button>
+            </form>
+            <!--  -->
+            <p class="form-content__text">Натискаючи на кнопку я погоджуюсь<br><a href="#">з політикою
+                конфіденційності</a>
+            </p>
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
   </main>
@@ -210,7 +233,7 @@
     <div class="container">
       <div class="footer-container">
         <nav class="footer-nav">
-          <a class="footer-nav__logo" href="/">beauty zone</a>
+          <div class="footer-nav__logo"> <a href="#">beauty zone</a></div>
           <ul class="footer-nav__list">
             <li class="footer-nav__item"><a class="footer-nav__item__link" href="#about-us">Про нас</a></li>
             <li class="footer-nav__item"><a class="footer-nav__item__link" href="#advantages">Чому ми</a></li>
@@ -225,10 +248,11 @@
             <li class="footer-address__item"><a class="footer-address__list__item__link"
                 href="mailto:beautyzone@gmail.com">beautyzone@gmail.com</a></li>
             <li class="footer-address__item"><a class="footer-address__list__item__link"
-                href="https://maps.app.goo.gl/f5roskzKXoE4J4bq9" target="_blank">Україна, м. Київ, вул. Тараса Шевченка
+                href="https://maps.app.goo.gl/f5roskzKXoE4J4bq9" target="_blank">Україна, м. Київ,<br> вул. Тараса
+                Шевченка
                 5</a></li>
             <!-- tel -->
-            <li class="footer-address__item">
+            <li class="footer-address__item social">
               <a class="footer-address__item__link" href="tel:+380960000007">
                 <svg class="adress-icon" width="42" height="42">
                   <use href="./assets/img/icons.svg#icon-telephone"></use>
@@ -236,7 +260,7 @@
               </a>
             </li>
             <!-- facebook -->
-            <li class="footer-address__item">
+            <li class="footer-address__item social">
               <a class="footer-address__item__link" href="#">
                 <svg class="adress-icon" width="42" height="42">
                   <use href="./assets/img/icons.svg#icon-facebook"></use>
@@ -244,7 +268,7 @@
               </a>
             </li>
             <!-- instagram -->
-            <li class="footer-address__item">
+            <li class="footer-address__item social">
               <a class="footer-address__item__link" href="#">
                 <svg class="adress-icon" width="42" height="42">
                   <use href="./assets/img/icons.svg#icon-instagram"></use>

@@ -73,7 +73,8 @@ address {
   font-size: normal;
 }
 
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -81,6 +82,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .container {
@@ -95,6 +97,7 @@ a {
   padding: 32px 0;
   background: var(--color-background-filter);
   backdrop-filter: blur(5px);
+  z-index: 2;
 }
 
 .header-container {
@@ -155,6 +158,33 @@ a {
   fill: var(--color-brand-light);
 }
 
+/* backgroung-section */
+
+.backgroung-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 90vh;
+  background: url("../img/image-background.jpg") no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.backgroung-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90%;
+  background: url("../img/hero-background.png") no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
 /* hero-section */
 
 .hero {
@@ -170,7 +200,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   /* background: linear-gradient(
     89deg,
     #fff 30.62%,
@@ -179,6 +209,25 @@ a {
     rgba(255, 255, 255, 0) 72.78%
   ); */
 }
+
+/* .section__img {
+  position: relative;
+}
+
+.section__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  z-index: -1;
+
+  background: url("../img/image-background.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+} */
 
 .hero-content {
   max-width: 529px;
@@ -388,32 +437,9 @@ a {
 
 .services-content {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 32px;
-}
-
-/* Carousel */
-.carousel-button {
-  cursor: pointer;
-  padding: 0;
-  height: 44px;
-  width: 44px;
-  border: none;
-  border-radius: 50%;
-}
-
-.carousel-arrow:hover {
-  --color1: var(--color-brand-light);
-  --color2: var(--color-link-light);
-}
-
-.carousel-arrow {
-  fill: var(--color1);
-}
-
-.carousel-button:first-child .carousel-arrow {
-  transform: rotate(180deg);
 }
 
 .services__title {
@@ -441,9 +467,8 @@ a {
 }
 
 .services-card {
-  width: 344px;
+  min-width: 344px;
   height: 456px;
-  flex-shrink: 0;
   position: relative;
 
   border-radius: 4px 120px;
@@ -460,8 +485,36 @@ a {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-  padding: 0;
+
   margin-top: 0;
+}
+
+.services-content__item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+/* Carousel */
+.carousel-button {
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  height: 44px;
+  width: 44px;
+  border: none;
+  border-radius: 50%;
+}
+
+.carousel-arrow:hover {
+  --color1: var(--color-brand-light);
+  --color2: var(--color-link-light);
+}
+
+.carousel-arrow {
+  fill: var(--color1);
+}
+
+.carousel-button:first-child .carousel-arrow {
+  transform: rotate(180deg);
 }
 
 /* address-section  */
@@ -480,10 +533,92 @@ a {
 iframe {
   max-width: 600px;
   width: 100%;
+  flex-shrink: 0;
 }
 
 .address__title span {
   color: var(--color-brand-light);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.form-content {
+  border-radius: 32px;
+  background: var(--color-brand-dark);
+  width: 423px;
+  height: 481px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.form-content__promo {
+  color: var(--color-link-light);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 48px 75px 32px;
+}
+
+.form-content__promo span {
+  color: var(--color-brand-light);
+}
+
+.form-content__text {
+  color: var(--color-copyright);
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px; /* 150% */
+  text-align: center;
+}
+
+.form-content__text a {
+  color: var(--color-copyright);
+  text-decoration: underline;
+}
+
+/* test-form */
+.form-action {
+  max-width: 281px;
+  margin: 32px auto 8px;
+}
+
+.form-action input {
+  width: 100%;
+  padding: 18px 33px;
+  margin-bottom: 13px;
+  border-radius: 32px;
+  border: 2px solid var(--color-copyright);
+  background: transparent;
+  color: var(--color-link-light);
+  font-size: 13px;
+}
+
+.form-action input:active,
+.form-action input:hover,
+.form-action input:focus {
+  background: var(--color-copyright);
+
+  /* ? */
+  outline: none;
+}
+
+.form-action input::placeholder {
+  font-size: 13px;
+  color: var(--color-link-light);
+}
+
+.form-action button {
+  max-width: 281px;
+  padding: 16px 32px;
+  border-radius: 32px;
+  background: var(--color-brand-light);
+  color: var(--color-link-light);
+  border: none;
+  font-weight: 600;
 }
 
 /* footer */
@@ -492,6 +627,7 @@ iframe {
   background: var(--color-brand-dark);
   height: 278px;
   position: relative;
+  padding: 56px 0;
 
   background-image: url("../img/pexels-photo-8101532-PhotoRoom\ 1.png");
   background-repeat: no-repeat;
@@ -501,21 +637,29 @@ iframe {
 
 .footer-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 186px;
+  /* justify-content: center;
+  align-items: center;*/
+  gap: 20px;
 }
 
 .footer-nav,
 .footer-address {
-  flex-grow: 1;
+  flex-basis: 50%;
   display: flex;
-  align-items: center;
-  gap: 186px;
-  margin-top: 56px;
+  gap: 20px;
 }
 
-.footer-nav__logo {
+.footer-nav__logo,
+.footer-nav__list {
+  flex-grow: 1;
+}
+
+.footer-address__list,
+.footer-info {
+  flex-grow: 1;
+}
+
+.footer-nav__logo a {
   color: var(--color-brand-light);
   font-family: var(--font-family-title);
   font-size: 24px;
@@ -523,17 +667,15 @@ iframe {
   max-width: 83px;
   line-height: 21px;
   text-transform: capitalize;
-
-  display: flex;
-  align-self: start;
 }
 
-.footer-nav__list {
-  width: 203px;
+.footer-nav__item,
+.footer-address__item {
+  margin-bottom: 15px;
 }
 
-.footer-nav__item {
-  margin-bottom: 13px;
+.footer-privacy__link {
+  margin-bottom: 16px;
 }
 
 .footer-nav__item__link,
@@ -550,9 +692,10 @@ iframe {
   font-weight: 700;
 }
 
-/* .footer-address__item__link:hover svg path {
-  fill: var(--color-brand-light);
-} */
+.social {
+  display: inline-block;
+  margin-right: 7%;
+}
 
 .adress-icon {
   fill: var(--color-link-light);
