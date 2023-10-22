@@ -143,6 +143,7 @@ a {
 
 .header-nav__link {
   color: var(--color-brand-dark);
+  transition: all 0.5s;
 }
 
 .header-nav__link:hover {
@@ -218,6 +219,7 @@ a {
   margin-bottom: 12px;
   padding: 16px 32px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .hero__button:hover {
@@ -486,13 +488,14 @@ a {
   border-radius: 50%;
 }
 
+.carousel-arrow {
+  transition: all 0.5s;
+  fill: var(--color1);
+}
+
 .carousel-arrow:hover {
   --color1: var(--color-brand-light);
   --color2: var(--color-link-light);
-}
-
-.carousel-arrow {
-  fill: var(--color1);
 }
 
 .carousel-button:first-child .carousel-arrow {
@@ -624,6 +627,7 @@ iframe {
   background: transparent;
   color: var(--color-link-light);
   font-size: 13px;
+  transition: all 0.5s;
 }
 
 .form-action input:active,
@@ -649,6 +653,7 @@ iframe {
   border-color: transparent;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .form-action button:hover {
@@ -743,6 +748,7 @@ iframe {
 .footer-privacy__link {
   color: var(--color-link-light);
   font-size: 16px;
+  transition: all 0.5s;
 }
 
 .footer-nav__item__link:hover,
@@ -759,6 +765,7 @@ iframe {
 
 .adress-icon {
   fill: var(--color-link-light);
+  transition: all 0.5s;
 }
 
 .adress-icon:hover {
