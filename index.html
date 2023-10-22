@@ -106,21 +106,7 @@
     <!-- advantages-section -->
     <section class="advantages section" id="advantages">
       <div class="container">
-        <div class="advantages-background">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1507" viewBox="0 0 1440 1507" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M1015.22 1337.67C843.995 1420.41 681.707 1522.18 492.376 1504.43C294.908 1485.92 120.319 1385.32 -15.7281 1241.03C-170.733 1076.62 -313.597 883.153 -306.334 657.304C-298.462 412.497 -193.856 145.53 23.1542 31.9091C227.164 -74.9055 448.972 123.559 678.526 141.655C938.036 162.113 1224.83 -17.697 1429.76 142.796C1655.09 319.273 1777.41 658.366 1683.59 928.798C1594.61 1185.29 1259.68 1219.54 1015.22 1337.67Z"
-              fill="url(#paint0_linear_64_137)" fill-opacity="0.2" />
-            <defs>
-              <linearGradient id="paint0_linear_64_137" x1="851" y1="-23.0002" x2="851" y2="1197.5"
-                gradientUnits="userSpaceOnUse">
-                <stop offset="0.334676" stop-color="#2B7FFF" />
-                <stop offset="0.634564" stop-color="#2B7FFF" stop-opacity="0" />
-                <stop offset="0.894715" stop-color="#2B7FFF" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+        <div class="advantages-background"></div>
         <h2 class="advantages__title">Чому люди <span>обирають нас</span></h2>
         <div class="advantages-content">
           <div class="advantages__item">
@@ -170,12 +156,18 @@
           <ul class="services-content__list">
             <li class="services-content__item">
               <article class="services-card" style="background: url('./assets/img/mask-for-face.jpg');">
-                <h3 class=" services-card__title">Маски для обличчя</h3>
+                <h3 class=" services-card__title">
+                  <span>Маски</span>
+                  <span>для обличчя</span>
+                </h3>
               </article>
             </li>
             <li class="services-content__item">
               <article class="services-card" style="background: url('./assets/img/face-injection.jpg');">
-                <h3 class=" services-card__title">Ін'єкції для обличчя</h3>
+                <h3 class=" services-card__title">
+                  <span>Ін'єкції</span>
+                  <span>для обличчя</span>
+                </h3>
               </article>
             </li>
             <li class="services-content__item">
@@ -189,6 +181,14 @@
               <use href="./assets/img/icons.svg#icon-arrow"></use>
             </svg>
           </button>
+        </div>
+        <!-- test-pagination -->
+        <div class="carousel-pagination pagination">
+          <div class="pagination-dot">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </section>
@@ -210,12 +210,12 @@
             <!-- test-form -->
             <form class="form-action" action="#" method="get">
               <input type="text" name="full-name" placeholder="Ваше ім'я та прізвище">
-              <input type="text" name="phone" placeholder="Ваш номер телефону">
-              <input type="text" name="email" placeholder="Ваша електронна пошта">
+              <input type="tel" name="phone" placeholder="Ваш номер телефону">
+              <input type="email" name="email" placeholder="Ваша електронна пошта">
               <button type="submit">Записатись безкоштовно</button>
             </form>
             <!--  -->
-            <p class="form-content__text">Натискаючи на кнопку я погоджуюсь<br><a href="#">з політикою
+            <p class="form-content__text">Натискаючи на кнопку я погоджуюсь<a href="#">з політикою
                 конфіденційності</a>
             </p>
           </div>
